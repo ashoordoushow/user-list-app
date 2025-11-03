@@ -28,7 +28,6 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role = Role.STAFF;
 
-    // Getters and setters
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
 
