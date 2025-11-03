@@ -1,4 +1,4 @@
-package com.example.userlist.models;
+package com.example.api.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -27,6 +27,15 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private Role role = Role.STAFF;
+
+public User(String firstName, String lastName, String email, Role role) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.role = role;
+}
+
+public User() {}
 
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
